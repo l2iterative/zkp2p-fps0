@@ -1,4 +1,4 @@
-use methods::{METHOD_ID, METHOD_ELF};
+use methods::{METHOD_ELF, METHOD_ID};
 use risc0_zkvm::{default_prover, ExecutorEnv};
 use serde::{Deserialize, Serialize};
 

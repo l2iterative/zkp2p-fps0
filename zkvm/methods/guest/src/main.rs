@@ -21,7 +21,6 @@ pub struct Witness {
     pub dkim_timestamp: Vec<u8>,
     pub bh_base64: Vec<u8>,
     pub receipt_number: Vec<u8>,
-    pub signature_mont: Vec<u8>,
 }
 
 fn check_no_rn(data: &[u8]) -> bool {
@@ -152,5 +151,4 @@ fn main() {
     assert!(check_no_semicolon(&witness.bh_base64));
 
     env::commit_slice(&data_hash);
-    eprintln!("total: {}", env::get_cycle_count());
 }
