@@ -1,0 +1,26 @@
+[workspace]
+resolver = "2"
+members = [
+    'zkvm/host',
+    'zkvm/methods'
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+
+[profile.bench]
+lto = true
+
+[profile.dev]
+opt-level = 3
+
+[profile.dev.build-override]
+opt-level = 3
+
+[profile.release]
+lto = true
+
+[profile.release.build-override]
+opt-level = 3
